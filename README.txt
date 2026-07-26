@@ -1,15 +1,21 @@
 STEFANO CACCIATORE PERSONAL WEBSITE
 
-Open index.html in a browser to preview the site.
+Official domain: https://stefanocacciatore.org
+Hosting: GitHub Pages
+
+Upload the files and the assets folder to the root of the stecac.github.io repository.
+The CNAME file keeps the custom domain connected to GitHub Pages.
 
 This version includes:
+- Responsive desktop and mobile layouts
 - Accessible hero language
 - Timeline-based biography
 - Selected recognition
 - Three concise research areas
 - Publication cards using cropped first pages of the actual papers
 - Speaking and scientific communication
-- Longevity Brief preview
-- Contact section
+- Longevity Brief Issue 01 preview
+- Contact and academic profile links
+- Custom-domain metadata, canonical URL, sitemap, robots.txt, and structured data
 
 No downloadable CV is included.
