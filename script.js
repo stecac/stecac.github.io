@@ -10,16 +10,28 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 12);
 }, { passive: true });
 
+const closeMenu = () => {
+  nav.classList.remove("open");
+  document.body.classList.remove("menu-open");
+  menuButton.setAttribute("aria-expanded", "false");
+};
+
 menuButton.addEventListener("click", () => {
   const open = nav.classList.toggle("open");
+  document.body.classList.toggle("menu-open", open);
   menuButton.setAttribute("aria-expanded", String(open));
 });
 
 nav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuButton.setAttribute("aria-expanded", "false");
-  });
+  link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeMenu();
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 980) closeMenu();
 });
 
 if ("IntersectionObserver" in window) {

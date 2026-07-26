@@ -789,3 +789,375 @@ footer p {
 @media (max-width: 410px) {
   .brand span { font-size: .78rem; }
 }
+
+/* Final responsive refinements */
+body {
+  overflow-x: hidden;
+}
+
+.nav {
+  position: relative;
+}
+
+.contact-icon-link span:last-child,
+.publication-card h3,
+.research-row h3 {
+  overflow-wrap: anywhere;
+}
+
+/* The shorter headline no longer needs a full-screen hero on large monitors. */
+@media (min-width: 981px) {
+  .hero,
+  .hero-grid {
+    min-height: clamp(620px, calc(100svh - 84px), 760px);
+  }
+}
+
+@media (max-width: 980px) {
+  .main-nav {
+    top: calc(100% - 1px);
+    left: 0;
+    right: 0;
+    max-height: calc(100svh - 76px);
+    overflow-y: auto;
+    border: 1px solid var(--line);
+    border-top: 0;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .hero-photo {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .hero-photo img {
+    height: 100%;
+    object-position: 50% 24%;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 74px;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .nav {
+    min-height: 74px;
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .brand img {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand span {
+    min-width: 0;
+    font-size: .84rem;
+    line-height: 1.15;
+  }
+
+  .menu-button {
+    min-width: 48px;
+    min-height: 44px;
+    padding: 0;
+    text-align: right;
+  }
+
+  .main-nav {
+    padding: 15px;
+    gap: 4px;
+    box-shadow: 0 24px 45px rgba(13, 26, 41, .16);
+  }
+
+  .main-nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+  }
+
+  .contact-button {
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  .hero-copy {
+    padding: 46px 0 38px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.85rem, 13.2vw, 4rem);
+    line-height: .94;
+    letter-spacing: -.058em;
+  }
+
+  .hero-copy > p {
+    margin-top: 23px;
+    font-size: .94rem;
+    line-height: 1.68;
+  }
+
+  .hero-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 27px;
+  }
+
+  .primary-link,
+  .secondary-link {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  /* Shorter, landscape crop on phones instead of a 590 px portrait block. */
+  .hero-photo {
+    width: calc(100% + 32px);
+    height: auto;
+    margin-left: -16px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero-photo img {
+    height: 100%;
+    object-position: 50% 24%;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .label {
+    margin-bottom: 14px;
+  }
+
+  .bio-grid {
+    gap: 38px;
+  }
+
+  .bio-photo img {
+    aspect-ratio: 4 / 3;
+    object-position: 50% 25%;
+  }
+
+  .bio-photo figcaption {
+    font-size: .68rem;
+  }
+
+  .bio-content .bio-intro {
+    font-size: 1.42rem;
+    line-height: 1.42;
+  }
+
+  .bio-content p {
+    margin-bottom: 19px;
+    font-size: .94rem;
+    line-height: 1.75;
+  }
+
+  .recognition {
+    padding: 64px 0;
+  }
+
+  .recognition-item,
+  .recognition-item:first-child,
+  .recognition-item:last-child {
+    padding: 25px 0 29px;
+  }
+
+  .recognition-item h2 {
+    margin-top: 14px;
+    font-size: 1.25rem;
+  }
+
+  .section-heading {
+    gap: 18px;
+    margin-bottom: 38px;
+  }
+
+  .section-heading h2,
+  .brief-heading h2,
+  .contact-heading h2,
+  .speaking-copy h2 {
+    font-size: clamp(2.55rem, 11vw, 3.2rem);
+    line-height: .98;
+    letter-spacing: -.057em;
+  }
+
+  .section-heading > p {
+    font-size: .92rem;
+  }
+
+  .research-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 30px 0;
+  }
+
+  .research-row p {
+    grid-column: 1;
+    font-size: .92rem;
+    line-height: 1.72;
+  }
+
+  .research-row h3 {
+    font-size: 1.65rem;
+  }
+
+  .publication-grid {
+    gap: 20px;
+  }
+
+  .publication-card {
+    display: block;
+  }
+
+  .publication-image {
+    padding: 9px 9px 0;
+  }
+
+  .publication-body {
+    min-height: 0;
+    padding: 23px 21px 25px;
+  }
+
+  .publication-journal {
+    margin-bottom: 18px;
+  }
+
+  .publication-card h3 {
+    font-size: 1.27rem;
+    line-height: 1.28;
+  }
+
+  .authors {
+    margin-top: 24px;
+    padding-top: 0;
+  }
+
+  .all-publications {
+    display: inline-block;
+    line-height: 1.55;
+  }
+
+  .speaking-copy {
+    padding: 68px 0 43px;
+  }
+
+  .speaking-copy p {
+    margin-top: 22px;
+    font-size: .93rem;
+  }
+
+  .speaking-photo {
+    width: calc(100% + 32px);
+    height: auto;
+    margin-left: -16px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .speaking-photo img {
+    height: 100%;
+    object-position: 54% 50%;
+  }
+
+  .brief-grid {
+    gap: 28px;
+  }
+
+  .brief-copy p {
+    font-size: 1.2rem;
+    line-height: 1.48;
+  }
+
+  .contact-grid {
+    gap: 42px;
+  }
+
+  .contact-heading > p:last-child {
+    font-size: .93rem;
+  }
+
+  .contact-icons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 16px;
+  }
+
+  .contact-icon-link:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .contact-icon-link {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .icon-circle {
+    width: 54px;
+    height: 54px;
+  }
+
+  .contact-icon-link span:last-child {
+    max-width: 100%;
+    font-size: .73rem;
+  }
+
+  footer {
+    padding: 29px 0;
+  }
+
+  .footer-grid {
+    gap: 16px;
+  }
+
+  .footer-nav {
+    gap: 10px 17px;
+  }
+
+  footer p {
+    white-space: normal;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 26px);
+  }
+
+  .brand span {
+    font-size: .77rem;
+  }
+
+  .hero h1 {
+    font-size: 2.68rem;
+  }
+
+  .hero-photo,
+  .speaking-photo {
+    width: calc(100% + 26px);
+    margin-left: -13px;
+  }
+
+  .contact-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-icon-link:first-child {
+    grid-column: auto;
+  }
+}
