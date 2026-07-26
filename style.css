@@ -809,7 +809,16 @@ body {
 @media (min-width: 981px) {
   .hero,
   .hero-grid {
-    min-height: clamp(620px, calc(100svh - 84px), 760px);
+    min-height: clamp(590px, 72svh, 690px);
+  }
+
+  .hero-copy {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .hero-photo img {
+    object-position: 51% 28%;
   }
 }
 
@@ -1097,10 +1106,6 @@ body {
     gap: 28px 16px;
   }
 
-  .contact-icon-link:first-child {
-    grid-column: 1 / -1;
-  }
-
   .contact-icon-link {
     min-width: 0;
     gap: 8px;
@@ -1157,7 +1162,4 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .contact-icon-link:first-child {
-    grid-column: auto;
-  }
 }
