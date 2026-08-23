@@ -34,3 +34,5 @@ V25 editorial refinement:
 v32: returned to a light editorial base with restrained navy details throughout the site.
 
 v33: added News homepage section, news archive, and first full news article page; updated Longevity Brief Issue 01 cover.
+
+v34: added three Institute on Aging news articles and compacted homepage News into three cards.
