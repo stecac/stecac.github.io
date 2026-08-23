@@ -19,3 +19,6 @@ This version includes:
 - Custom-domain metadata, canonical URL, sitemap, robots.txt, and structured data
 
 No downloadable CV is included.
+
+
+V24 adds a dedicated Longevity Brief landing page and links Issue 01 to its published LinkedIn edition.
