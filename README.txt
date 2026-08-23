@@ -22,3 +22,11 @@ No downloadable CV is included.
 
 
 V24 adds a dedicated Longevity Brief landing page and links Issue 01 to its published LinkedIn edition.
+
+V25 editorial refinement:
+- Shorter Longevity Brief description
+- Simplified Longevity Brief landing hero
+- Smaller latest-issue cover
+- Compact archive rows with thumbnail covers
+- Removed repeated issue/date information
+- Added a restrained blue accent across the shared site design system

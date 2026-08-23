@@ -4,6 +4,8 @@
   --ink: #1e252d;
   --muted: #69747d;
   --blue-gray: #647e91;
+  --accent-blue: #426b8a;
+  --accent-blue-soft: #e8eff4;
   --paper: #f6f6f2;
   --white: #ffffff;
   --line: #d9dedf;
@@ -30,6 +32,12 @@ body {
 a { color: inherit; }
 img { display: block; width: 100%; }
 figure { margin: 0; }
+
+::selection {
+  background: var(--accent-blue-soft);
+  color: var(--navy-dark);
+}
+
 
 .container {
   width: min(1200px, calc(100% - 48px));
@@ -88,7 +96,7 @@ figure { margin: 0; }
   text-decoration: none;
 }
 
-.main-nav a:hover { color: var(--blue-gray); }
+.main-nav a:hover { color: var(--accent-blue); }
 
 .contact-button {
   padding: 11px 17px;
@@ -192,7 +200,7 @@ figure { margin: 0; }
 
 .label {
   margin: 0 0 21px;
-  color: var(--blue-gray);
+  color: var(--accent-blue);
   font-family: "Instrument Sans", Arial, sans-serif;
   font-size: .68rem;
   font-weight: 700;
@@ -550,7 +558,7 @@ figure { margin: 0; }
 
 .contact-icon-link:hover strong,
 .contact-icon-link:hover span:last-child {
-  color: var(--blue-gray);
+  color: var(--accent-blue);
 }
 
 .icon-circle {
@@ -1264,18 +1272,18 @@ body {
 
 /* Longevity Brief: homepage editorial teaser */
 .brief-content .brief-tagline {
-  font-size: clamp(2.5rem, 4.2vw, 4.4rem);
+  font-size: clamp(2.4rem, 4vw, 4.1rem);
 }
 
 .brief-latest {
-  margin-top: 34px;
-  padding-top: 28px;
+  margin-top: 32px;
+  padding-top: 26px;
   border-top: 1px solid rgba(20, 38, 58, .14);
 }
 
 .brief-kicker {
   margin: 0 0 7px;
-  color: var(--navy);
+  color: var(--accent-blue);
   font-family: "Instrument Sans", Arial, sans-serif;
   font-size: .68rem;
   font-weight: 700;
@@ -1311,247 +1319,275 @@ body {
   margin-top: 28px;
 }
 
-/* Longevity Brief landing page */
-.brief-page {
+/* Longevity Brief landing page. Same visual system, more editorial scale. */
+.longevity-brief-page .brief-page {
   background: var(--paper);
 }
 
-.brief-page-hero {
-  padding: 108px 0 112px;
+.longevity-brief-page .brief-page-hero {
+  padding: 80px 0 84px;
   border-bottom: 1px solid var(--line);
   background: var(--white);
 }
 
-.brief-page-hero h1 {
-  max-width: 1050px;
+.longevity-brief-page .brief-page-hero h1 {
+  max-width: 900px;
   margin: 0;
   color: var(--navy-dark);
   font-family: "Instrument Sans", Arial, sans-serif;
-  font-size: clamp(5rem, 10vw, 9.2rem);
+  font-size: clamp(3.8rem, 7vw, 6.4rem);
   font-weight: 600;
-  line-height: .88;
-  letter-spacing: -.075em;
+  line-height: .95;
+  letter-spacing: -.06em;
 }
 
-.brief-page-tagline {
-  max-width: 850px;
-  margin: 35px 0 0;
+.longevity-brief-page .brief-page-tagline {
+  max-width: 720px;
+  margin: 28px 0 0;
   color: var(--navy);
   font-family: "Instrument Sans", Arial, sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
   font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -.04em;
+  line-height: 1.35;
+  letter-spacing: -.025em;
 }
 
-.brief-page-intro {
-  max-width: 790px;
-  margin: 34px 0 0;
+.longevity-brief-page .brief-page-intro {
+  max-width: 680px;
+  margin: 18px 0 0;
   color: var(--muted);
   font-size: 1rem;
-  line-height: 1.82;
+  line-height: 1.7;
 }
 
-.brief-page-platform {
-  display: inline-block;
-  margin: 26px 0 0;
-  color: var(--blue-gray);
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.brief-latest-section {
+.longevity-brief-page .brief-latest-section {
   background: var(--sand);
 }
 
-.brief-page-heading {
+.longevity-brief-page .brief-page-heading {
   display: flex;
   justify-content: space-between;
   align-items: end;
   gap: 40px;
-  margin-bottom: 48px;
+  margin-bottom: 38px;
 }
 
-.brief-page-heading h2 {
+.longevity-brief-page .brief-page-heading-simple {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.longevity-brief-page .brief-page-heading-simple .label {
+  margin-bottom: 0;
+}
+
+.longevity-brief-page .brief-page-heading h2 {
   margin: 0;
   color: var(--navy-dark);
   font-family: "Instrument Sans", Arial, sans-serif;
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.5rem);
   font-weight: 600;
-  line-height: .96;
-  letter-spacing: -.06em;
+  line-height: .98;
+  letter-spacing: -.055em;
 }
 
-.brief-page-heading > p {
+.longevity-brief-page .brief-page-heading > p {
   margin: 0;
   color: var(--muted);
   font-size: .82rem;
 }
 
-.brief-latest-card {
+.longevity-brief-page .brief-latest-card {
   display: grid;
-  grid-template-columns: 1.18fr .82fr;
-  gap: 72px;
-  align-items: center;
+  grid-template-columns: minmax(280px, 400px) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
 }
 
-.brief-latest-cover {
+.longevity-brief-page .brief-latest-cover {
   display: block;
+  width: 100%;
+  max-width: 400px;
   overflow: hidden;
   border: 1px solid rgba(20, 38, 58, .10);
   background: var(--white);
-  box-shadow: 0 24px 58px rgba(13, 26, 41, .10);
+  box-shadow: 0 18px 42px rgba(13, 26, 41, .09);
 }
 
-.brief-latest-cover img {
+.longevity-brief-page .brief-latest-cover img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
-.brief-latest-copy h2 {
+.longevity-brief-page .brief-latest-copy {
+  padding-top: 4px;
+  max-width: 650px;
+}
+
+.longevity-brief-page .brief-latest-copy .brief-issue,
+.longevity-brief-page .brief-archive-card .brief-issue {
+  color: var(--accent-blue);
+}
+
+.longevity-brief-page .brief-latest-copy h2 {
   margin: 0;
   color: var(--navy-dark);
   font-family: "Instrument Sans", Arial, sans-serif;
-  font-size: clamp(2.4rem, 4vw, 4.1rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 600;
-  line-height: 1;
-  letter-spacing: -.057em;
+  line-height: 1.06;
+  letter-spacing: -.048em;
 }
 
-.brief-latest-copy > p:not(.brief-issue) {
-  margin: 25px 0 30px;
+.longevity-brief-page .brief-latest-copy > p:not(.brief-issue) {
+  margin: 22px 0 28px;
   color: #59625d;
-  line-height: 1.78;
+  font-size: .95rem;
+  line-height: 1.72;
 }
 
-.brief-archive-section {
+.longevity-brief-page .brief-archive-section {
   background: var(--white);
 }
 
-.brief-archive-grid {
+.longevity-brief-page .brief-archive-grid {
   border-top: 1px solid var(--line);
 }
 
-.brief-archive-card {
+.longevity-brief-page .brief-archive-card {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 46px;
-  padding: 36px 0;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 30px;
+  padding: 28px 0;
   border-bottom: 1px solid var(--line);
-  align-items: center;
+  align-items: start;
 }
 
-.brief-archive-card > a {
+.longevity-brief-page .brief-archive-card > a {
   display: block;
+  width: 180px;
   overflow: hidden;
   border: 1px solid var(--line);
+  background: var(--paper);
 }
 
-.brief-archive-card img {
+.longevity-brief-page .brief-archive-card img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
-.brief-archive-card h3 {
+.longevity-brief-page .brief-archive-card h3 {
   max-width: 720px;
   margin: 0;
   color: var(--navy-dark);
   font-family: "Instrument Sans", Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 1.55rem;
   font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -.045em;
+  line-height: 1.15;
+  letter-spacing: -.035em;
 }
 
-.brief-archive-card h3 a {
+.longevity-brief-page .brief-archive-card h3 a {
   text-decoration: none;
 }
 
-.brief-archive-card div > p:not(.brief-issue) {
-  max-width: 700px;
-  margin: 15px 0 18px;
-  color: var(--muted);
-  font-size: .92rem;
-}
-
-.brief-text-link {
+.longevity-brief-page .brief-text-link {
   display: inline-block;
+  margin-top: 15px;
   padding-bottom: 3px;
-  border-bottom: 1px solid var(--navy);
-  color: var(--navy);
+  border-bottom: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
   font-size: .78rem;
   font-weight: 600;
   text-decoration: none;
 }
 
+.longevity-brief-page .brief-text-link:hover {
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
 @media (max-width: 980px) {
-  .brief-page-hero {
-    padding: 82px 0 86px;
+  .longevity-brief-page .brief-page-hero {
+    padding: 72px 0 76px;
   }
 
-  .brief-latest-card {
-    grid-template-columns: 1fr;
-    gap: 42px;
+  .longevity-brief-page .brief-latest-card {
+    grid-template-columns: minmax(240px, 340px) minmax(0, 1fr);
+    gap: 40px;
   }
 
-  .brief-archive-card {
-    grid-template-columns: 240px 1fr;
-    gap: 32px;
+  .longevity-brief-page .brief-archive-card {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .longevity-brief-page .brief-archive-card > a {
+    width: 160px;
   }
 }
 
 @media (max-width: 767px) {
   .brief-content .brief-tagline {
-    font-size: clamp(2.25rem, 10vw, 3rem);
+    font-size: clamp(2.2rem, 9.5vw, 2.9rem);
   }
 
   .brief-actions {
     display: grid;
   }
 
-  .brief-page-hero {
-    padding: 70px 0 72px;
+  .longevity-brief-page .brief-page-hero {
+    padding: 60px 0 64px;
   }
 
-  .brief-page-hero h1 {
-    font-size: clamp(4rem, 19vw, 6rem);
+  .longevity-brief-page .brief-page-hero h1 {
+    font-size: clamp(3.25rem, 15vw, 4.6rem);
   }
 
-  .brief-page-tagline {
-    margin-top: 25px;
-    font-size: 1.65rem;
+  .longevity-brief-page .brief-page-tagline {
+    margin-top: 22px;
+    font-size: 1.45rem;
   }
 
-  .brief-page-intro {
-    margin-top: 27px;
+  .longevity-brief-page .brief-page-intro {
+    margin-top: 15px;
     font-size: .94rem;
-    line-height: 1.72;
+    line-height: 1.68;
   }
 
-  .brief-page-heading {
-    flex-direction: column;
-    align-items: start;
-    gap: 12px;
-    margin-bottom: 34px;
+  .longevity-brief-page .brief-page-heading {
+    margin-bottom: 25px;
   }
 
-  .brief-latest-card {
-    gap: 30px;
-  }
-
-  .brief-latest-copy h2 {
-    font-size: clamp(2.25rem, 10vw, 3rem);
-  }
-
-  .brief-archive-card {
+  .longevity-brief-page .brief-latest-card {
     grid-template-columns: 1fr;
-    gap: 23px;
-    padding: 28px 0;
+    gap: 28px;
   }
 
-  .brief-archive-card h3 {
-    font-size: 1.55rem;
+  .longevity-brief-page .brief-latest-cover {
+    max-width: 100%;
+  }
+
+  .longevity-brief-page .brief-latest-copy h2 {
+    font-size: clamp(2rem, 9vw, 2.7rem);
+  }
+
+  .longevity-brief-page .brief-archive-card {
+    grid-template-columns: 118px minmax(0, 1fr);
+    gap: 18px;
+    padding: 24px 0;
+  }
+
+  .longevity-brief-page .brief-archive-card > a {
+    width: 118px;
+  }
+
+  .longevity-brief-page .brief-archive-card h3 {
+    font-size: 1.22rem;
+  }
+
+  .longevity-brief-page .brief-text-link {
+    margin-top: 11px;
+    font-size: .74rem;
   }
 }
