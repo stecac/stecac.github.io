@@ -31,4 +31,4 @@ V25 editorial refinement:
 - Removed repeated issue/date information
 - Added a restrained blue accent across the shared site design system
 
-v26a-blue-only: visual palette test only. Content and structure unchanged.
+v32: returned to a light editorial base with restrained navy details throughout the site.

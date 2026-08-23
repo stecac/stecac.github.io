@@ -4,12 +4,12 @@
   --ink: #1e252d;
   --muted: #69747d;
   --blue-gray: #647e91;
-  --accent-blue: #3f6f92;
-  --accent-blue-soft: #e8f0f6;
-  --paper: #f7f9fb;
+  --accent-blue: #426b8a;
+  --accent-blue-soft: #e8eff4;
+  --paper: #f6f6f2;
   --white: #ffffff;
   --line: #d9dedf;
-  --sand: #eef4f8;
+  --sand: #ece7dd;
   --shadow: 0 28px 70px rgba(13, 26, 41, .12);
 }
 
@@ -1593,58 +1593,210 @@ body {
 }
 
 
-/* V26 palette refinement */
-.research-section {
-  background: #eef4f8;
+/* v32: light site with navy signature details */
+:root {
+  --navy: #14263a;
+  --navy-dark: #0d1a29;
+  --accent-blue: #365f82;
+  --accent-blue-soft: #edf4f8;
+  --paper: #f8fafb;
+  --sand: #f1f6f9;
+  --line: #d8e0e6;
 }
 
-.brief-section {
-  background: #f2f6f9;
-}
-
-.recognition {
+body {
   background: #f8fafb;
 }
 
-.contact-section {
-  background: #ffffff;
-}
-
-.publications-section {
-  background: #ffffff;
-}
-
 .site-header {
-  background: rgba(247, 249, 251, .94);
+  background: rgba(248, 250, 251, .94);
+  border-bottom: 1px solid rgba(20, 38, 58, .08);
 }
 
+.site-header.scrolled {
+  border-color: rgba(20, 38, 58, .14);
+  box-shadow: 0 10px 28px rgba(20, 38, 58, .045);
+}
+
+/* Hero remains bright and editorial. */
+.hero {
+  background: #f8fafb;
+  border-bottom: 1px solid rgba(20, 38, 58, .10);
+}
+
+.hero-copy {
+  background: transparent;
+}
+
+.hero h1 {
+  color: var(--navy-dark);
+}
+
+.hero-copy > p {
+  color: #66727d;
+}
+
+.hero-photo {
+  border-left: 1px solid rgba(20, 38, 58, .08);
+}
+
+/* Main CTAs use the logo navy, secondary remains light. */
 .primary-link {
-  background: #17334d;
+  color: #ffffff;
+  background: var(--navy);
+  border: 1px solid var(--navy);
+  box-shadow: 0 8px 20px rgba(20, 38, 58, .09);
+}
+
+.primary-link:hover {
+  background: #1c3550;
+  border-color: #1c3550;
 }
 
 .secondary-link {
-  background: rgba(255,255,255,.72);
-  border-color: rgba(63,111,146,.25);
+  color: var(--navy-dark);
+  background: #ffffff;
+  border: 1px solid rgba(20, 38, 58, .16);
 }
 
-.all-publications,
-.brief-text-link,
-.speaking-copy a {
-  text-decoration-thickness: 1px;
+.secondary-link:hover {
+  border-color: rgba(20, 38, 58, .34);
+  background: #f4f7f9;
 }
 
+/* Contact button uses the same navy language as the main CTA. */
+.main-nav .contact-button,
+.main-nav .contact-button:visited,
+.main-nav .contact-button:hover {
+  color: #ffffff;
+}
+
+.main-nav .contact-button {
+  background: var(--navy);
+  border: 1px solid var(--navy);
+}
+
+.main-nav .contact-button:hover {
+  background: #1c3550;
+}
+
+/* Section rhythm: very light blue, never dark. */
+.bio-section,
+.publications-section,
+.contact-section,
+.longevity-brief-page .brief-page-hero,
+.longevity-brief-page .brief-archive-section {
+  background: #ffffff;
+}
+
+.research-section {
+  background: #f1f6f9;
+}
+
+.recognition {
+  background: #f7f9fb;
+}
+
+.brief-section,
+.longevity-brief-page .brief-latest-section {
+  background: #eef4f8;
+}
+
+/* Navy details, kept small and recurrent. */
+.label,
+.number,
+.publication-journal,
+.brief-kicker,
+.brief-issue,
+.longevity-brief-page .brief-latest-copy .brief-issue,
+.longevity-brief-page .brief-archive-card .brief-issue,
+.recognition-item span {
+  color: var(--accent-blue);
+}
+
+.section-heading::after,
+.longevity-brief-page .brief-page-heading::after,
+.longevity-brief-page .brief-page-heading-simple::after {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 2px;
+  margin-top: 17px;
+  background: linear-gradient(90deg, var(--navy) 0%, rgba(20,38,58,0) 100%);
+}
+
+.research-list,
 .research-row,
 .recognition-grid,
 .recognition-item,
 .publication-card,
 .brief-latest,
-.brief-archive-grid,
-.brief-archive-card {
-  border-color: rgba(63,111,146,.18);
+.longevity-brief-page .brief-archive-grid,
+.longevity-brief-page .brief-archive-card,
+footer {
+  border-color: rgba(20, 38, 58, .13);
 }
 
-.recognition-item span,
-.longevity-brief-page .brief-issue,
-.longevity-brief-page .brief-kicker {
+.publication-card {
+  background: #fbfcfd;
+  box-shadow: 0 12px 30px rgba(20, 38, 58, .045);
+}
+
+.publication-image {
+  background: #f0f4f6;
+}
+
+.all-publications,
+.longevity-brief-page .brief-text-link,
+.brief-copy span,
+.brief-status span {
+  color: var(--navy);
+  border-bottom-color: rgba(20, 38, 58, .42);
+}
+
+.all-publications:hover,
+.longevity-brief-page .brief-text-link:hover {
   color: var(--accent-blue);
+  border-bottom-color: var(--accent-blue);
+}
+
+/* Keep the dark speaking section as a deliberate visual anchor. */
+.speaking-section {
+  background: var(--navy-dark);
+}
+
+.label.light {
+  color: #b8c8d5;
+}
+
+.speaking-copy a {
+  border-bottom-color: rgba(255,255,255,.55);
+}
+
+/* Contact icons become a recurring navy signature. */
+.icon-circle {
+  background: var(--navy);
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 10px 24px rgba(20, 38, 58, .10);
+}
+
+.contact-icon-link:hover strong,
+.contact-icon-link:hover span:last-child {
+  color: var(--accent-blue);
+}
+
+footer {
+  background: #f8fafb;
+}
+
+::selection {
+  background: #dceaf3;
+  color: var(--navy-dark);
+}
+
+@media (max-width: 980px) {
+  .hero-photo {
+    border-left: 0;
+    border-top: 1px solid rgba(20, 38, 58, .08);
+  }
 }
