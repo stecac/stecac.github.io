@@ -4,12 +4,12 @@
   --ink: #1e252d;
   --muted: #69747d;
   --blue-gray: #647e91;
-  --accent-blue: #426b8a;
-  --accent-blue-soft: #e8eff4;
-  --paper: #f6f6f2;
+  --accent-blue: #3f6f92;
+  --accent-blue-soft: #e8f0f6;
+  --paper: #f7f9fb;
   --white: #ffffff;
   --line: #d9dedf;
-  --sand: #ece7dd;
+  --sand: #eef4f8;
   --shadow: 0 28px 70px rgba(13, 26, 41, .12);
 }
 
@@ -1590,4 +1590,61 @@ body {
     margin-top: 11px;
     font-size: .74rem;
   }
+}
+
+
+/* V26 palette refinement */
+.research-section {
+  background: #eef4f8;
+}
+
+.brief-section {
+  background: #f2f6f9;
+}
+
+.recognition {
+  background: #f8fafb;
+}
+
+.contact-section {
+  background: #ffffff;
+}
+
+.publications-section {
+  background: #ffffff;
+}
+
+.site-header {
+  background: rgba(247, 249, 251, .94);
+}
+
+.primary-link {
+  background: #17334d;
+}
+
+.secondary-link {
+  background: rgba(255,255,255,.72);
+  border-color: rgba(63,111,146,.25);
+}
+
+.all-publications,
+.brief-text-link,
+.speaking-copy a {
+  text-decoration-thickness: 1px;
+}
+
+.research-row,
+.recognition-grid,
+.recognition-item,
+.publication-card,
+.brief-latest,
+.brief-archive-grid,
+.brief-archive-card {
+  border-color: rgba(63,111,146,.18);
+}
+
+.recognition-item span,
+.longevity-brief-page .brief-issue,
+.longevity-brief-page .brief-kicker {
+  color: var(--accent-blue);
 }

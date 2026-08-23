@@ -30,3 +30,5 @@ V25 editorial refinement:
 - Compact archive rows with thumbnail covers
 - Removed repeated issue/date information
 - Added a restrained blue accent across the shared site design system
+
+v26a-blue-only: visual palette test only. Content and structure unchanged.
