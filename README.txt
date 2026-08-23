@@ -32,3 +32,5 @@ V25 editorial refinement:
 - Added a restrained blue accent across the shared site design system
 
 v32: returned to a light editorial base with restrained navy details throughout the site.
+
+v33: added News homepage section, news archive, and first full news article page; updated Longevity Brief Issue 01 cover.
