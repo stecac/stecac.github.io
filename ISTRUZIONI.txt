@@ -1,16 +1,25 @@
-CORREZIONE IMPAGINAZIONE CURRICULUM
+CORREZIONE DELLA HOMEPAGE: RIQUADRI DEI RICONOSCIMENTI
 
-Sostituisci nel repository questi due file, mantenendo le cartelle:
+Questo archivio contiene soltanto i due file da sostituire nella directory
+principale del repository stecac/stecac.github.io:
 
-curriculum/index.html
-style.css
+1. index.html
+2. style.css
 
-Dopo il caricamento, attendi la pubblicazione di GitHub Pages e ricarica la pagina senza cache.
-Su macOS: Command + Shift + R.
+Entrambi devono rimanere nella directory principale, senza creare nuove
+cartelle e senza modificare gli altri file del sito.
 
-La nuova versione:
-- rende Curriculum grande quanto le altre intestazioni del sito;
-- rende uniformi i titoli Education, Academic and Clinical Appointments, Editorial Appointments e Academic Service;
-- ripristina l'allineamento delle date sulla destra;
-- usa classi CSS univoche per evitare conflitti con la homepage;
-- aggiunge una versione al collegamento del CSS per evitare la vecchia copia in cache.
+La correzione mantiene intatta la pagina Curriculum e uniforma i tre riquadri
+Selected Recognition: stesso margine interno, stessa altezza per i loghi,
+date allineate e titoli contenuti entro i bordi.
+
+Per aggiornare il sito:
+
+1. Apri il repository stecac/stecac.github.io su GitHub.
+2. Seleziona Add file e poi Upload files.
+3. Trascina insieme index.html e style.css.
+4. Conferma con Commit changes.
+5. Attendi l'aggiornamento di GitHub Pages e ricarica la homepage.
+
+Se visualizzi ancora la versione precedente, aggiorna la pagina con
+Command + Shift + R su Mac oppure Ctrl + F5 su Windows.

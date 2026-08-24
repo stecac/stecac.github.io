@@ -3337,3 +3337,89 @@ footer {
     padding: 28px 0;
   }
 }
+
+/* Home recognition cards: consistent padding and aligned content rows. */
+.home-page .recognition-grid {
+  align-items: stretch;
+}
+
+.home-page .recognition-grid .recognition-item--logo {
+  box-sizing: border-box;
+  display: grid;
+  min-width: 0;
+  min-height: 260px;
+  grid-template-rows: 104px auto minmax(0, 1fr);
+  align-content: start;
+  row-gap: 16px;
+  padding: 28px 26px 30px;
+  border: 1px solid rgba(20, 38, 58, .10);
+}
+
+.home-page .recognition-grid .recognition-item--logo:first-child,
+.home-page .recognition-grid .recognition-item--logo:last-child {
+  padding: 28px 26px 30px;
+  border: 1px solid rgba(20, 38, 58, .10);
+}
+
+.home-page .recognition-grid .recognition-logo-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  height: 104px;
+  min-width: 0;
+  min-height: 104px;
+}
+
+.home-page .recognition-grid .recognition-item--logo:nth-child(1)
+.recognition-logo-wrap img.recognition-logo-long,
+.home-page .recognition-grid .recognition-item--logo:nth-child(2)
+.recognition-logo-wrap img.recognition-logo-long {
+  max-width: min(100%, 245px);
+}
+
+.home-page .recognition-grid .recognition-item--logo:nth-child(3)
+.recognition-logo-wrap img.recognition-logo-long {
+  max-width: min(100%, 255px);
+}
+
+.home-page .recognition-grid .recognition-meta {
+  margin: 0;
+}
+
+.home-page .recognition-grid .recognition-item--logo h2 {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 980px) {
+  .home-page .recognition-grid .recognition-item--logo {
+    min-height: 244px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-page .recognition-grid .recognition-item--logo,
+  .home-page .recognition-grid .recognition-item--logo:first-child,
+  .home-page .recognition-grid .recognition-item--logo:last-child {
+    min-height: 0;
+    grid-template-rows: 76px auto auto;
+    row-gap: 14px;
+    padding: 24px 20px 25px;
+    border: 1px solid rgba(20, 38, 58, .10);
+  }
+
+  .home-page .recognition-grid .recognition-logo-wrap {
+    height: 76px;
+    min-height: 76px;
+  }
+
+  .home-page .recognition-grid .recognition-item--logo:nth-child(1)
+  .recognition-logo-wrap img.recognition-logo-long,
+  .home-page .recognition-grid .recognition-item--logo:nth-child(2)
+  .recognition-logo-wrap img.recognition-logo-long,
+  .home-page .recognition-grid .recognition-item--logo:nth-child(3)
+  .recognition-logo-wrap img.recognition-logo-long {
+    max-width: min(100%, 230px);
+    max-height: 72px;
+  }
+}
