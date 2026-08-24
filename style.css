@@ -3124,3 +3124,222 @@ footer {
     height: 64px;
   }
 }
+
+/* Curriculum page */
+.curriculum-page {
+  background: #f8fafb;
+}
+
+.curriculum-page .curriculum-hero {
+  padding: 86px 0 91px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
+.curriculum-page .curriculum-hero h1 {
+  margin: 0;
+  color: var(--navy-dark);
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: clamp(4rem, 7vw, 6.5rem);
+  font-weight: 600;
+  line-height: .95;
+  letter-spacing: -.065em;
+}
+
+.curriculum-page .curriculum-body {
+  padding: 18px 0 88px;
+  background: #f8fafb;
+}
+
+.curriculum-page .curriculum-inner {
+  width: min(1100px, calc(100% - 48px));
+}
+
+.curriculum-page .cv-section {
+  display: grid;
+  grid-template-columns: minmax(184px, .72fr) minmax(0, 2fr);
+  column-gap: clamp(42px, 7vw, 110px);
+  padding: 67px 0 62px;
+  border-bottom: 1px solid var(--line);
+}
+
+.curriculum-page .cv-section:last-child {
+  padding-bottom: 43px;
+  border-bottom: 0;
+}
+
+.curriculum-page .section-heading h2 {
+  margin: 5px 0 0;
+  color: var(--navy-dark);
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 1.075rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -.028em;
+}
+
+.curriculum-page .entries {
+  min-width: 0;
+}
+
+.curriculum-page .entry {
+  padding: 25px 0 27px;
+  border-bottom: 1px solid rgba(20, 38, 58, .10);
+}
+
+.curriculum-page .entry:first-child {
+  padding-top: 0;
+}
+
+.curriculum-page .entry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.curriculum-page .entry-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 25px;
+}
+
+.curriculum-page .entry-title {
+  margin: 0;
+  color: var(--navy-dark);
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: .965rem;
+  font-weight: 600;
+  line-height: 1.47;
+  letter-spacing: -.018em;
+}
+
+.curriculum-page .entry-date {
+  color: var(--blue-gray);
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: .735rem;
+  font-weight: 500;
+  letter-spacing: .012em;
+  white-space: nowrap;
+}
+
+.curriculum-page .entry-meta {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: .815rem;
+  line-height: 1.65;
+}
+
+.curriculum-page .journal {
+  font-style: italic;
+}
+
+.curriculum-page .roles {
+  display: grid;
+  gap: 11px;
+  margin-top: 17px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(20, 38, 58, .075);
+}
+
+.curriculum-page .role {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.curriculum-page .role-name {
+  color: var(--ink);
+  font-size: .785rem;
+  line-height: 1.55;
+}
+
+.curriculum-page .role .entry-date {
+  font-size: .695rem;
+}
+
+@media (max-width: 767px) {
+  .curriculum-page .curriculum-hero {
+    padding: 60px 0 64px;
+  }
+
+  .curriculum-page .curriculum-hero h1 {
+    font-size: clamp(3.5rem, 12.8vw, 5rem);
+    letter-spacing: -.061em;
+  }
+
+  .curriculum-page .curriculum-body {
+    padding: 6px 0 53px;
+  }
+
+  .curriculum-page .curriculum-inner {
+    width: calc(100% - 32px);
+  }
+
+  .curriculum-page .cv-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 47px 0 45px;
+  }
+
+  .curriculum-page .cv-section:last-child {
+    padding-bottom: 28px;
+  }
+
+  .curriculum-page .section-heading h2 {
+    margin: 0;
+    color: var(--accent-blue);
+    font-size: 1.02rem;
+  }
+
+  .curriculum-page .entry {
+    padding: 21px 0 23px;
+  }
+
+  .curriculum-page .entry-header {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .curriculum-page .entry-title {
+    font-size: .955rem;
+  }
+
+  .curriculum-page .entry-meta {
+    margin-top: 6px;
+  }
+
+  .curriculum-page .roles {
+    gap: 13px;
+    margin-top: 16px;
+  }
+
+  .curriculum-page .role {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculum-page .role .entry-date {
+    margin-top: -9px;
+  }
+}
+
+@media print {
+  .curriculum-page .site-header,
+  .curriculum-page footer {
+    display: none;
+  }
+
+  .curriculum-page .curriculum-hero {
+    padding: 28px 0 36px;
+  }
+
+  .curriculum-page .curriculum-body {
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .curriculum-page .cv-section {
+    break-inside: avoid;
+    padding: 28px 0;
+  }
+}
