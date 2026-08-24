@@ -1,25 +1,16 @@
-AGGIORNAMENTO PAGINA CURRICULUM
+CORREZIONE IMPAGINAZIONE CURRICULUM
 
-Questo archivio contiene soltanto i file nuovi o aggiornati del sito.
+Sostituisci nel repository questi due file, mantenendo le cartelle:
 
-1. Estrai l'archivio ZIP.
-2. Copia tutto il contenuto nella cartella principale del repository stecac.github.io.
-3. Mantieni esattamente la struttura delle cartelle.
-4. Sostituisci i file esistenti quando richiesto.
-5. Non eliminare assets, script.js, CNAME, robots.txt o gli altri file gia presenti.
-6. Pubblica le modifiche nel branch main di GitHub Pages.
-
-FILE NUOVO
 curriculum/index.html
-
-FILE AGGIORNATI
 style.css
-sitemap.xml
-index.html
-publications/index.html
-news/index.html
-longevity-brief/index.html
-Tutti gli index.html delle singole notizie.
 
-La voce Curriculum viene aggiunta sia alla navigazione principale sia al footer di ogni pagina.
-Il nuovo indirizzo sara https://stefanocacciatore.org/curriculum/
+Dopo il caricamento, attendi la pubblicazione di GitHub Pages e ricarica la pagina senza cache.
+Su macOS: Command + Shift + R.
+
+La nuova versione:
+- rende Curriculum grande quanto le altre intestazioni del sito;
+- rende uniformi i titoli Education, Academic and Clinical Appointments, Editorial Appointments e Academic Service;
+- ripristina l'allineamento delle date sulla destra;
+- usa classi CSS univoche per evitare conflitti con la homepage;
+- aggiunge una versione al collegamento del CSS per evitare la vecchia copia in cache.
