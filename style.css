@@ -245,6 +245,103 @@
   }
 }
 
+/* Longevity Brief v2: editorial author identity and a compact three-issue archive. */
+.brief-issue-page .issue-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  color: var(--muted);
+}
+
+.brief-issue-page .issue-author img {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 18%;
+  border: 1px solid rgba(20, 38, 58, .12);
+}
+
+.brief-issue-page .issue-author div {
+  display: grid;
+  gap: 3px;
+}
+
+.brief-issue-page .issue-author p {
+  margin: 0;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.brief-issue-page .issue-author p a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brief-issue-page .issue-author span,
+.brief-issue-page .issue-author time {
+  display: block;
+  font-size: .82rem;
+  line-height: 1.4;
+}
+
+.brief-issue-page .issue-author time {
+  color: var(--blue-gray);
+}
+
+.longevity-brief-page .brief-archive-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.longevity-brief-page .brief-archive-card {
+  min-width: 0;
+}
+
+.longevity-brief-page .brief-archive-card > a {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.longevity-brief-page .brief-archive-card > a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .longevity-brief-page .brief-archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .brief-issue-page .issue-author {
+    align-items: flex-start;
+    gap: 13px;
+    margin-top: 24px;
+  }
+
+  .brief-issue-page .issue-author img {
+    width: 54px;
+    height: 54px;
+    flex-basis: 54px;
+  }
+
+  .brief-issue-page .issue-author span {
+    font-size: .76rem;
+  }
+
+  .longevity-brief-page .brief-archive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 * { box-sizing: border-box; }
 
 html {
@@ -3133,6 +3230,22 @@ footer {
   max-width: min(100%, 245px);
 }
 
+/* The Zegna source artwork is especially horizontal: give it its own scale and
+   center it without changing the other recognition cards. */
+.home-page .recognition-grid .recognition-item--logo:nth-child(1)
+.recognition-logo-wrap {
+  justify-content: center;
+}
+
+.home-page .recognition-grid .recognition-item--logo:nth-child(1)
+.recognition-logo-wrap img.recognition-logo-long {
+  width: min(100%, 320px) !important;
+  max-width: min(100%, 320px);
+  max-height: 88px;
+  margin-inline: auto;
+  object-position: center;
+}
+
 .home-page .recognition-grid .recognition-item--logo:nth-child(3)
 .recognition-logo-wrap img.recognition-logo-long {
   max-width: min(100%, 255px);
@@ -3178,6 +3291,13 @@ footer {
   .recognition-logo-wrap img.recognition-logo-long {
     max-width: min(100%, 230px);
     max-height: 72px;
+  }
+
+  .home-page .recognition-grid .recognition-item--logo:nth-child(1)
+  .recognition-logo-wrap img.recognition-logo-long {
+    width: min(100%, 280px) !important;
+    max-width: min(100%, 280px);
+    max-height: 68px;
   }
 }
 
@@ -3359,5 +3479,32 @@ button:focus-visible {
 
   .longevity-brief-page .brief-archive-card > a {
     width: min(100%, 320px);
+  }
+}
+
+/* Final archive layout override. */
+.longevity-brief-page .brief-archive-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.longevity-brief-page .brief-archive-card {
+  display: block;
+}
+
+.longevity-brief-page .brief-archive-card > a {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 900px) {
+  .longevity-brief-page .brief-archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .longevity-brief-page .brief-archive-grid {
+    grid-template-columns: 1fr;
   }
 }
