@@ -3508,3 +3508,39 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* Compact Longevity Brief archive. */
+.longevity-brief-page .brief-archive-grid {
+  display: block;
+  border-top: 1px solid var(--line);
+}
+
+.longevity-brief-page .brief-archive-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 30px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.longevity-brief-page .brief-archive-card > a {
+  width: 180px;
+  aspect-ratio: 16 / 9;
+}
+
+.longevity-brief-page .brief-archive-card h3 {
+  max-width: 720px;
+}
+
+@media (max-width: 767px) {
+  .longevity-brief-page .brief-archive-card {
+    grid-template-columns: 118px minmax(0, 1fr);
+    gap: 18px;
+    padding: 22px 0;
+  }
+
+  .longevity-brief-page .brief-archive-card > a {
+    width: 118px;
+  }
+}
