@@ -1,8 +1,0 @@
-SITE REFRESH - SEPTEMBER 2026
-
-1. Upload the contents of this package to the root of stecac/stecac.github.io.
-2. Preserve the folder structure and overwrite files with the same names.
-3. Delete the files and folder listed in FILES_TO_DELETE.txt.
-4. Wait for GitHub Pages to redeploy, then verify the home page, News, Curriculum, and the two new articles.
-
-This package does not yet publish Longevity Brief Issue 03.
